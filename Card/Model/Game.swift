@@ -32,16 +32,16 @@ class Game
     func checkMatch() -> Bool
     {
         let cardsMatch : Bool
-        if score => 11
-        {
-            cardGameController.scoreCount.text = "You won!"
-        }
+        if score >= 11
+            {
+                cardGameController.scoreCount.text = "You won!"
+            }
         if(hand[0].rank == hand[1].rank || hand[0].suit == hand[1].suit)
-        {
-            cardsMatch = true
-        }else{
-            cardsMatch = false
-        }
+            {
+                cardsMatch = true
+            }else{
+                cardsMatch = false
+            }
         return cardsMatch
     }
     
