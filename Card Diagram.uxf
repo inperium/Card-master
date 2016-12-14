@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1116</x>
+      <y>261</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>CardGame.Model::Card
+--
+-backImage : UIImage
+-isFaceUp : Bool
+--
++ getFacing : Bool
++ init() : Initializer
++ toString() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1044</x>
+      <y>531</y>
+      <w>306</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>CardGame.Model::PlayingCard
+--
+- rank : Int
+- suit : String
+- color: UIColor
+--
++ getRank() : Int
++ getSuit() : String
++ getColor() : UiColor
++ intit() : Initializer
++ toString() : String
++ init(withRank:Int, ofSuit:String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>378</y>
+      <w>27</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>243</y>
+      <w>297</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>CardGame.Model::Deck
+--
+- cards : [Card]
+--
++ shuffleDeck() : Void
++ init
++ shuffleDeck : Void
++ cutDeck : Void
++ drawCard : Card!
++ drawRandomCard() : Card!</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>576</y>
+      <w>306</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>CardGame.Model::PlayingCardDeck
+--
+- card
+--
++init
++orderDeck() : Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>450</y>
+      <w>27</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>999</x>
+      <y>693</y>
+      <w>63</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=52</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>999</x>
+      <y>306</y>
+      <w>135</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>36</x>
+      <y>72</y>
+      <w>495</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>View
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>135</y>
+      <w>396</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>CardGame.View::CardView
+--
+frontimage : UIImageView
+backimage : UIImageView
+isFaceUP : Bool
+bottomLabel : UILabel
+topLabel : UILabel
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
