@@ -10,8 +10,7 @@ import UIKit
 
 class CardGameController : UIViewController
 {
-    fileprivate lazy var clickCount = Int()
-    fileprivate lazy var cardDeck = PlayingCardDeck()
+    fileprivate var game: Game!
     
     @IBOutlet weak var cardLabel: UILabel!
     @IBOutlet weak var cardButton: UIButton!
@@ -21,15 +20,12 @@ class CardGameController : UIViewController
 
     override func viewDidLoad() -> Void
     {
-        let tempCard = Card()
-        print(tempCard.toString())
+        self.game = Game(cardGameController: self)
     }
     
-    @IBAction func drawCard(_ sender: UIButton)
+    @IBAction func ontBtnClick(sender: UIButton)
     {
-        var hand = [PlayingCard]()
-        hand.append(PlayingCard())
-        hand.append(PlayingCard())
+        
         
     }
     

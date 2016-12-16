@@ -10,7 +10,10 @@ import Foundation
 
 class Game
 {
-    fileprivate var gameDeck : PlayingCardDeck
+    fileprivate var discardDeck : PlayingCardDeck
+    fileprivate var inPlayDeck : PlayingCardDeck
+    fileprivate var handDeck : PlayingCardDeck
+    fileprivate var gameDeck: PlayingCardDeck
     fileprivate var score : Int
     fileprivate var cardGameController: CardGameController!
     
@@ -19,14 +22,20 @@ class Game
     {
         self.cardGameController = cardGameController
         gameDeck = PlayingCardDeck()
+        discardDeck = PlayingCardDeck()
+        inPlayDeck = PlayingCardDeck()
+        handDeck = PlayingCardDeck()
         score = 0
     }
     
     func startGame() -> Void
     {
         score = 0
+    }
+    
+    func drawCard(){
         
-
+        
     }
     
     func checkMatch() -> Bool
@@ -36,15 +45,17 @@ class Game
             {
                 cardGameController.scoreCount.text = "You won!"
             }
-        if(hand[0].rank == hand[1].rank || hand[0].suit == hand[1].suit)
+        
+        let playingCard1 = inPlayDeck.cards[0] as! PlayingCard
+        let playingCard2 = inPlayDeck.cards[1] as! PlayingCard
+        if(playingCard1.getRank() == playingCard2.getRank() || playingCard1.getSuit() == playingCard2.getSuit())
             {
                 cardsMatch = true
+                
             }else{
                 cardsMatch = false
             }
         return cardsMatch
     }
-    
-    var hand = [PlayingCard]()
     
 }
